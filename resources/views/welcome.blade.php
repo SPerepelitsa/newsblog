@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Who is on duty today?
                 </div>
 
                 <div class="links">
