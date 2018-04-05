@@ -11,7 +11,8 @@
                 </div>
 
                 <div class="featured-image">
-                    <img width="290" height="130" src="img/HighRes-290x130.jpg"  />                <div class="post-icon">
+                    <img width="290" height="130" src="/img/HighRes-290x130.jpg"/>
+                    <div class="post-icon">
                     <span class="fa-stack fa-lg">
                         <i class="fa fa-circle fa-stack-2x"></i>
                         <i class="fa fa-picture-o fa-stack-1x fa-inverse"></i>                    </span>
@@ -19,7 +20,8 @@
                 </div>
 
                 <div class="post-margin">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet auctor ligula. Donec eu</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet auctor ligula. Donec
+                        eu</p>
                 </div>
             </li>
             <li class="first carousel-item">
@@ -29,7 +31,8 @@
                 </div>
 
                 <div class="featured-image">
-                    <img width="290" height="130" src="img/one-more-beer-290x130.png"  />                <div class="post-icon">
+                    <img width="290" height="130" src="/img/one-more-beer-290x130.png"/>
+                    <div class="post-icon">
                     <span class="fa-stack fa-lg">
                         <i class="fa fa-circle fa-stack-2x"></i>
                         <i class="fa fa-play-circle-o fa-stack-1x fa-inverse"></i>                    </span>
@@ -37,7 +40,8 @@
                 </div>
 
                 <div class="post-margin">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet auctor ligula. Donec eu</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet auctor ligula. Donec
+                        eu</p>
                 </div>
             </li>
             <li class="last carousel-item">
@@ -47,7 +51,8 @@
                 </div>
 
                 <div class="featured-image">
-                    <img width="290" height="130" src="img/Port_Harbor1-290x130.jpg"  />                <div class="post-icon">
+                    <img width="290" height="130" src="/img/Port_Harbor1-290x130.jpg"/>
+                    <div class="post-icon">
                     <span class="fa-stack fa-lg">
                         <i class="fa fa-circle fa-stack-2x"></i>
                         <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>                    </span>
@@ -55,7 +60,8 @@
                 </div>
 
                 <div class="post-margin">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet auctor ligula. Donec eu</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet auctor ligula. Donec
+                        eu</p>
                 </div>
             </li>
             <li class="first carousel-item">
@@ -65,7 +71,8 @@
                 </div>
 
                 <div class="featured-image">
-                    <img width="290" height="130" src="img/Timothy-J-Reynolds-2560x14401-290x130.jpg"  />                <div class="post-icon">
+                    <img width="290" height="130" src="/img/Timothy-J-Reynolds-2560x14401-290x130.jpg"/>
+                    <div class="post-icon">
                     <span class="fa-stack fa-lg">
                         <i class="fa fa-circle fa-stack-2x"></i>
                         <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>                    </span>
@@ -73,7 +80,8 @@
                 </div>
 
                 <div class="post-margin">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet auctor ligula. Donec eu</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet auctor ligula. Donec
+                        eu</p>
                 </div>
             </li>
             <li class="first carousel-item">
@@ -83,7 +91,8 @@
                 </div>
 
                 <div class="featured-image">
-                    <img width="290" height="130" src="img/UFO1-290x130.jpg"  />                <div class="post-icon">
+                    <img width="290" height="130" src="/img/UFO1-290x130.jpg"/>
+                    <div class="post-icon">
                     <span class="fa-stack fa-lg">
                         <i class="fa fa-circle fa-stack-2x"></i>
                         <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>                    </span>
@@ -91,7 +100,8 @@
                 </div>
 
                 <div class="post-margin">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet auctor ligula. Donec eu</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet auctor ligula. Donec
+                        eu</p>
                 </div>
             </li>
             <li class="last carousel-item">
@@ -101,7 +111,8 @@
                 </div>
 
                 <div class="featured-image">
-                    <img width="290" height="130" src="img/Diamantina-Full_Landscape-290x130.jpg"  />                <div class="post-icon">
+                    <img width="290" height="130" src="/img/Diamantina-Full_Landscape-290x130.jpg"/>
+                    <div class="post-icon">
                     <span class="fa-stack fa-lg">
                         <i class="fa fa-circle fa-stack-2x"></i>
                         <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>                    </span>
@@ -109,7 +120,8 @@
                 </div>
 
                 <div class="post-margin">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet auctor ligula. Donec eu</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet auctor ligula. Donec
+                        eu</p>
                 </div>
             </li>
 

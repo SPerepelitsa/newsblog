@@ -4,7 +4,7 @@ a:hover{ color:#2ecc71; }
 .post .post-social a:hover{ background:#2ecc71; }
 .post-icon .fa-inverse{ color:#2ecc71; }
 .pagination li a:hover{ background:#2ecc71; }
-.pagination li.current a{ background:#2ecc71; }
+.pagination li.active span{ background:#2ecc71; }
 .widget-container .searchform #searchsubmit{ background:#2ecc71; }
 .tagcloud a:hover{ background:#2ecc71;}
 .comment-header a{ color:#2ecc71; }

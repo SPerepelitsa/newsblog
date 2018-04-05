@@ -22,8 +22,14 @@ Route::get('/', function () {
 // Authorization routes
 Auth::routes();
 
+//News route (main page info)
+Route::get('/', 'NewsController@index')->name('main');
+Route::get('news/{post}', 'NewsController@single')->name('single');
+
 //Posts routes
-Route::resource('posts', 'PostController');
+Route::group(['prefix' => 'admin'], function () {
+    Route::resource('posts', 'PostController');
+});
 
 
 //Home route

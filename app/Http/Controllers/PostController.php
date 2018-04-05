@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Session;
 use App\Models\Post;
 
 class PostController extends Controller
@@ -26,7 +27,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -37,7 +38,17 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required|max:50',
+            'body' => 'required',
+        ]);
+
+        $post = Post::create($request->all());
+
+
+        Session::flash('success', 'Your post was successfully saved!');
+
+        return redirect()->route('posts.index');
     }
 
     /**
@@ -48,7 +59,9 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::find($id);
+
+        return view('posts.show')->with('post', $post);
     }
 
     /**
@@ -59,7 +72,9 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+
+        return view('posts.edit')->with('post', $post);
     }
 
     /**
@@ -71,7 +86,19 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required|max:50',
+            'body' => 'required',
+        ]);
+
+        $post = Post::find($id);
+        $post->title = $request->title;
+        $post->body = $request->body;
+        $post->save();
+
+        Session::flash('success', 'Your post was successfully updated!');
+
+        return redirect()->route('posts.index');
     }
 
     /**
@@ -82,6 +109,12 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+        $post->delete();
+
+        Session::flash('success', 'Your post was successfully deleted!');
+
+        return redirect()->route('posts.index');
+
     }
 }

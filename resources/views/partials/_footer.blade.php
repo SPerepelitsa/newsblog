@@ -8,7 +8,7 @@
             <!-- End Footer Copyright -->
 
             <!-- Footer Logo -->
-            <img src="images/footer-logo.png" id="footer-logo" />
+            <img src="/images/footer-logo.png" id="footer-logo"/>
             <!-- End Footer Logo -->
 
             <div class="clear"></div>

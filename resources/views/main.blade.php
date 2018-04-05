@@ -10,7 +10,7 @@
 
 @include('partials/_nav')
 
-@include('partials/_carousel')
+{{--@include('partials/_carousel')--}}
 
 
 @yield('content')

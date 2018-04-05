@@ -5,13 +5,13 @@
             <div id="header-nav-container">
 
                 <a href="#">
-                    <img src="images/logo1.png" id="logo"/>
+                    <img src="/images/logo1.png" id="logo"/>
                 </a>
 
                 <!-- Navigation Menu -->
 
                 <ul class="sf-menu">
-                    <li class="menu-item current-menu-item"><a href="welcome.blade.php">Home</a></li>
+                    <li class="menu-item current-menu-item"><a href="{{route('main')}}">Home</a></li>
                     <li class="menu-item"><a href="blog.html">Blog</a></li>
                     <li class="menu-item"><a href="#">Features</a>
                         <ul class="sub-menu">

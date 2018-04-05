@@ -93,9 +93,9 @@ a:hover{ color:#2980b9; }
 
 /* Pagination */
 .pagination li{ float:left; margin-right:3px; text-transform:uppercase }
-.pagination li a{ background:#343434; color:#FFF; font-size:14px; padding:10px; padding-left:15px; padding-right:15px; font-weight:bold }
+.pagination li a, .pagination li span{ background:#343434; color:#FFF; font-size:14px; padding:10px; padding-left:15px; padding-right:15px; font-weight:bold }
 .pagination li a:hover{ background:#2980b9; color:#FFFFFF }
-.pagination li.current a{ background:#2980b9; color:#FFFFFF }
+.pagination li.active span{ background:#2980b9; color:#FFFFFF }
 
 
 

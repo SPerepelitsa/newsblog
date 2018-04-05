@@ -11,232 +11,75 @@
             <div class="wrap-col">
 
                 <!-- Start Post Item -->
-                <div class="post">
-                    <div class="post-margin">
+                @foreach($posts as $post)
+                    <div class="post">
+                        <div class="post-margin">
+                            <div class="post-avatar">
+                                <div class="avatar-frame"></div>
+                                <img alt=''
+                                     src='http://1.gravatar.com/avatar/16afd22c8bf5c2398b206a76c9316a3c?s=70&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D70&amp;r=G'
+                                     class='avatar avatar-70 photo' height='70' width='70'/></div>
 
-                        <div class="post-avatar">
-                            <div class="avatar-frame"></div>
-                            <img alt=''
-                                 src='http://1.gravatar.com/avatar/16afd22c8bf5c2398b206a76c9316a3c?s=70&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D70&amp;r=G'
-                                 class='avatar avatar-70 photo' height='70' width='70'/></div>
+                            <h4 class="post-title"><a href="#">{{$post->title}}</a></h4>
+                            <ul class="post-status">
+                                <li><i class="fa fa-clock-o"></i>{{$post->created_at->format('F j, Y')}}</li>
+                                <li><i class="fa fa-folder-open-o"></i><a href="#"
+                                                                          title="View all posts in Illustration"
+                                                                          rel="category">Illustration</a></li>
+                                <li><i class="fa fa-comment-o"></i>No Comments</li>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
 
-                        <h4 class="post-title"><a href="#">Port Harbor</a></h4>
-                        <ul class="post-status">
-                            <li><i class="fa fa-clock-o"></i>December 13, 2013</li>
-                            <li><i class="fa fa-folder-open-o"></i><a href="#" title="View all posts in Illustration"
-                                                                      rel="category">Illustration</a></li>
-                            <li><i class="fa fa-comment-o"></i>No Comments</li>
-                        </ul>
-                        <div class="clear"></div>
-                    </div>
-
-                    <div class="featured-image">
-                        <img src="img/Port_Harbor1-610x350.jpg" class="attachment-post-standard "/>
-                        <div class="post-icon">
+                        <div class="featured-image">
+                            <img src="/img/Port_Harbor1-610x350.jpg" class="attachment-post-standard "/>
+                            <div class="post-icon">
                     <span class="fa-stack fa-lg">
                       <i class="fa fa-circle fa-stack-2x"></i>
                       <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
                     </span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="post-margin">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet auctor ligula. Donec
-                            eu placerat lacus, pellentesque tincidunt felis. Aliquam dictum cursus elit, et sagittis
-                            nibh tincidunt quis. Vestibulum leo dui, ullamcorper quis erat nec, accumsan imperdiet
-                            ligula. Maecenas ut dui sed arcu sodales consequat. Nulla et est ac lacus congue volutpat.
-                            Aliquam vehicula tincidunt sem eget cursus. Nam sed mollis diam. Pellentesque id felis ut
-                            diam dignissim egestas id non ipsum.
+                        <div class="post-margin">
+                            <p>{{substr(strip_tags($post->body), 0, 320)}} {{strlen(strip_tags($post->body)) > 320 ? " ..." : ""}}</p>
+                        </div>
+                        <ul class="post-social">
+                            <li><a href="#" target="_blank">
+                                    <i class="fa fa-facebook"></i></a>
+                            </li>
 
-                            Ut id magna eu eros vehicula sollicitudin at et odio. Mauris consectetur tortor in mauris
-                            aliquet feugiat. Etiam</p>
-                    </div>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="fa fa-twitter"></i></a>
+                            </li>
 
-                    <ul class="post-social">
-                        <li><a href="#" target="_blank">
-                                <i class="fa fa-facebook"></i></a>
-                        </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="fa fa-google-plus"></i></a>
+                            </li>
 
-                        <li>
-                            <a href="#" target="_blank">
-                                <i class="fa fa-twitter"></i></a>
-                        </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="fa fa-linkedin"></i></a>
+                            </li>
 
-                        <li>
-                            <a href="#" target="_blank">
-                                <i class="fa fa-google-plus"></i></a>
-                        </li>
-
-                        <li>
-                            <a href="#" target="_blank">
-                                <i class="fa fa-linkedin"></i></a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="readmore">Read More <i class="fa fa-arrow-circle-o-right"></i></a>
-                        </li>
-                    </ul>
-
-                    <div class="clear"></div>
-                </div>
-                <!-- End Post Item -->
-
-
-                <!-- Start Post Item -->
-                <div class="post">
-                    <div class="post-margin">
-
-                        <div class="post-avatar">
-                            <div class="avatar-frame"></div>
-                            <img alt=''
-                                 src='http://1.gravatar.com/avatar/16afd22c8bf5c2398b206a76c9316a3c?s=70&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D70&amp;r=G'
-                                 class='avatar avatar-70 photo' height='70' width='70'/></div>
-
-                        <h4 class="post-title"><a href="#">One More Beer</a></h4>
-                        <ul class="post-status">
-                            <li><i class="fa fa-clock-o"></i>December 13, 2013</li>
-                            <li><i class="fa fa-folder-open-o"></i><a href="#" title="View all posts in Illustration"
-                                                                      rel="category">Illustration</a></li>
-                            <li><i class="fa fa-comment-o"></i>No Comments</li>
+                            <li>
+                                <a href="{{route('single', $post->id)}}" class="readmore">Read More <i
+                                            class="fa fa-arrow-circle-o-right"></i></a>
+                            </li>
                         </ul>
+
                         <div class="clear"></div>
                     </div>
-
-                    <div class="featured-image">
-                        <iframe src="//player.vimeo.com/video/50522981?title=0&amp;byline=0&amp;portrait=0&amp;color=2ecc71"
-                                width="450" height="244" frameborder="0" webkitallowfullscreen mozallowfullscreen
-                                allowfullscreen></iframe>
-                        <div class="post-icon">
-                    <span class="fa-stack fa-lg">
-                      <i class="fa fa-circle fa-stack-2x"></i>
-                      <i class="fa fa-play-circle-o fa-stack-1x fa-inverse"></i>
-                    </span>
-                        </div>
-                    </div>
-
-                    <div class="post-margin">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet auctor ligula. Donec
-                            eu placerat lacus, pellentesque tincidunt felis. Aliquam dictum cursus elit, et sagittis
-                            nibh tincidunt quis. Vestibulum leo dui, ullamcorper quis erat nec, accumsan imperdiet
-                            ligula. Maecenas ut dui sed arcu sodales consequat. Nulla et est ac lacus congue volutpat.
-                            Aliquam vehicula tincidunt sem eget cursus. Nam sed mollis diam. Pellentesque id felis ut
-                            diam dignissim egestas id non ipsum.
-
-                            Ut id magna eu eros vehicula sollicitudin at et odio. Mauris consectetur tortor in mauris
-                            aliquet feugiat. Etiam</p>
-                    </div>
-
-                    <ul class="post-social">
-                        <li><a href="#" target="_blank">
-                                <i class="fa fa-facebook"></i></a>
-                        </li>
-
-                        <li>
-                            <a href="#" target="_blank">
-                                <i class="fa fa-twitter"></i></a>
-                        </li>
-
-                        <li>
-                            <a href="#" target="_blank">
-                                <i class="fa fa-google-plus"></i></a>
-                        </li>
-
-                        <li>
-                            <a href="#" target="_blank">
-                                <i class="fa fa-linkedin"></i></a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="readmore">Read More <i class="fa fa-arrow-circle-o-right"></i></a>
-                        </li>
-                    </ul>
-
-                    <div class="clear"></div>
-                </div>
-                <!-- End Post Item -->
-
-
-                <!-- Start Post Item -->
-                <div class="post">
-                    <div class="post-margin">
-
-                        <div class="post-avatar">
-                            <div class="avatar-frame"></div>
-                            <img alt=''
-                                 src='http://1.gravatar.com/avatar/16afd22c8bf5c2398b206a76c9316a3c?s=70&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D70&amp;r=G'
-                                 class='avatar avatar-70 photo' height='70' width='70'/></div>
-
-                        <h4 class="post-title"><a href="#">Port Harbor</a></h4>
-                        <ul class="post-status">
-                            <li><i class="fa fa-clock-o"></i>December 13, 2013</li>
-                            <li><i class="fa fa-folder-open-o"></i><a href="#" title="View all posts in Illustration"
-                                                                      rel="category">Illustration</a></li>
-                            <li><i class="fa fa-comment-o"></i>No Comments</li>
-                        </ul>
-                        <div class="clear"></div>
-                    </div>
-
-                    <div class="featured-image">
-                        <img src="img/Port_Harbor1-610x350.jpg" class="attachment-post-standard "/>
-                        <div class="post-icon">
-                    <span class="fa-stack fa-lg">
-                      <i class="fa fa-circle fa-stack-2x"></i>
-                      <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                    </span>
-                        </div>
-                    </div>
-
-                    <div class="post-margin">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet auctor ligula. Donec
-                            eu placerat lacus, pellentesque tincidunt felis. Aliquam dictum cursus elit, et sagittis
-                            nibh tincidunt quis. Vestibulum leo dui, ullamcorper quis erat nec, accumsan imperdiet
-                            ligula. Maecenas ut dui sed arcu sodales consequat. Nulla et est ac lacus congue volutpat.
-                            Aliquam vehicula tincidunt sem eget cursus. Nam sed mollis diam. Pellentesque id felis ut
-                            diam dignissim egestas id non ipsum.
-
-                            Ut id magna eu eros vehicula sollicitudin at et odio. Mauris consectetur tortor in mauris
-                            aliquet feugiat. Etiam</p>
-                    </div>
-
-                    <ul class="post-social">
-                        <li><a href="#" target="_blank">
-                                <i class="fa fa-facebook"></i></a>
-                        </li>
-
-                        <li>
-                            <a href="#" target="_blank">
-                                <i class="fa fa-twitter"></i></a>
-                        </li>
-
-                        <li>
-                            <a href="#" target="_blank">
-                                <i class="fa fa-google-plus"></i></a>
-                        </li>
-
-                        <li>
-                            <a href="#" target="_blank">
-                                <i class="fa fa-linkedin"></i></a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="readmore">Read More <i class="fa fa-arrow-circle-o-right"></i></a>
-                        </li>
-                    </ul>
-
-                    <div class="clear"></div>
-                </div>
-                <!-- End Post Item -->
+            @endforeach
+            <!-- End Post Item -->
 
 
                 <!-- Start Pagination -->
                 <div class="spacing-20"></div>
-                <ul class="pagination">
-                    <li class='current'><a href=''>1</a></li>
-                    <li><a href=''>2</a></li>
-                    <li><a href=''>3</a></li>
-                    <li><a href=''>4</a></li>
-                </ul>
-                <!-- End Pagination -->
+            {!! $posts->links() !!}
+            <!-- End Pagination -->
 
                 <div class="clear"></div>
             </div>
@@ -273,7 +116,7 @@
                         <li>
                             <div class="post-image">
                                 <div class="post-mask"></div>
-                                <img width="70" height="70" src="img/HighRes-70x70.jpg"
+                                <img width="70" height="70" src="/img/HighRes-70x70.jpg"
                                      class="attachment-post-widget #"/></div>
 
                             <h6><a href="#">The Lighthouse Effect</a></h6>
@@ -285,7 +128,7 @@
                         <li>
                             <div class="post-image">
                                 <div class="post-mask"></div>
-                                <img width="70" height="70" src="img/one-more-beer-70x70.png"
+                                <img width="70" height="70" src="/img/one-more-beer-70x70.png"
                                      class="attachment-post-widget #"/></div>
 
                             <h6><a href="#">One More Beer</a></h6>
@@ -297,7 +140,7 @@
                         <li>
                             <div class="post-image">
                                 <div class="post-mask"></div>
-                                <img width="70" height="70" src="img/Port_Harbor1-70x70.jpg"
+                                <img width="70" height="70" src="/img/Port_Harbor1-70x70.jpg"
                                      class="attachment-post-widget #"/></div>
 
                             <h6><a href="#">Port Harbor</a></h6>
@@ -309,7 +152,7 @@
                         <li>
                             <div class="post-image">
                                 <div class="post-mask"></div>
-                                <img width="70" height="70" src="img/Timothy-J-Reynolds-2560x14401-70x70.jpg"
+                                <img width="70" height="70" src="/img/Timothy-J-Reynolds-2560x14401-70x70.jpg"
                                      class="attachment-post-widget #"/></div>
 
                             <h6><a href="#">Underground Volcano</a></h6>
@@ -330,8 +173,5 @@
     </div>
     <!-- End Main Container -->
 
-    @stop
+@stop
 
-    </body>
-
-    </html>
