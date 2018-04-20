@@ -17,14 +17,14 @@
 
     <div class="row">
         <div class="col-md-12">
-            <table class="table">
-                <thead>
+            <table class="table table-hover">
+                <thead class="thead-dark">
                 <tr>
-                    <th>#</th>
-                    <th>Title</th>
-                    <th>Body</th>
-                    <th>Created At</th>
-                    <th>Action</th>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Body</th>
+                    <th scope="col">Created At</th>
+                    <th scope="col">Action</th>
                 </tr>
                 </thead>
 
@@ -33,20 +33,20 @@
                 @foreach($posts as $post)
 
                     <tr>
-                        <th>{{$post->id}}</th>
-                        <td>{{$post->title}}</td>
+                        <th scope="row">{{$post->id}}</th>
+                        <td>{{substr(strip_tags($post->title), 0,60)}} {{strlen(strip_tags($post->title)) > 60 ? " ..." : ""}}</td>
                         <td>{{substr(strip_tags($post->body), 0, 120)}} {{strlen(strip_tags($post->body)) > 120 ? " ..." : ""}}</td>
                         <!--view only part of a post, from 0 to 120 symbol-->
                         <td>{{$post->created_at->format("d.m.Y H:i:s")}}</td>
                         <!--  ->diffForHumans() - days past format of viewing -->
                         <td>
-                            <div class="action-buttons">
+                            <div class="btn-group">
                                 <button><a href="{{ route('posts.show', $post->id) }}"><i class="fa fa-eye"></i></a>
                                 </button>
                                 <button><a href="{{ route('posts.edit', $post->id) }}"><i
                                                 class="fa fa-pencil text-warning"></i></a></button>
                                 <form action="{{ route('posts.destroy', $post->id) }}" method="post" role="form"
-                                      class="postForm" style="display: inline-block;">
+                                      class="postForm">
                                     {{ method_field('DELETE') }}
                                     <input name="_token" type="hidden" value="{{ csrf_token() }}"/>
                                     <button type="submit"

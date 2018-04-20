@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Session;
 use App\Models\Post;
 
 class PostController extends Controller
@@ -39,16 +38,13 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required|max:50',
+            'title' => 'required|max:120',
             'body' => 'required',
         ]);
 
-        $post = Post::create($request->all());
+        $post = Post::create($request->only(['title', 'body']));
 
-
-        Session::flash('success', 'Your post was successfully saved!');
-
-        return redirect()->route('posts.index');
+        return redirect()->route('posts.index')->with('success', 'Your post was successfully saved!');
     }
 
     /**
@@ -60,6 +56,9 @@ class PostController extends Controller
     public function show($id)
     {
         $post = Post::find($id);
+        if (!$post) {
+            throw new \Exception('the post is not exists');
+        }
 
         return view('posts.show')->with('post', $post);
     }
@@ -73,6 +72,9 @@ class PostController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
+        if (!$post) {
+            throw new \Exception('the post is not exists');
+        }
 
         return view('posts.edit')->with('post', $post);
     }
@@ -87,18 +89,19 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'title' => 'required|max:50',
+            'title' => 'required|max:120',
             'body' => 'required',
         ]);
 
         $post = Post::find($id);
+        if (!$post) {
+            throw new \Exception('the post is not exists');
+        }
         $post->title = $request->title;
         $post->body = $request->body;
         $post->save();
 
-        Session::flash('success', 'Your post was successfully updated!');
-
-        return redirect()->route('posts.index');
+        return redirect()->route('posts.index')->with('success', 'Your post was successfully updated!');
     }
 
     /**
@@ -110,11 +113,11 @@ class PostController extends Controller
     public function destroy($id)
     {
         $post = Post::find($id);
+        if (!$post) {
+            throw new \Exception('the post is not exists');
+        }
         $post->delete();
 
-        Session::flash('success', 'Your post was successfully deleted!');
-
-        return redirect()->route('posts.index');
-
+        return redirect()->route('posts.index')->with('success', 'Your post was successfully deleted!');
     }
 }

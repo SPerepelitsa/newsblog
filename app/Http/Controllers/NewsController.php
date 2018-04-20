@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+
 use App\Models\Post;
 
 class NewsController extends Controller
@@ -17,6 +17,9 @@ class NewsController extends Controller
     public function single($id)
     {
         $post = Post::find($id);
+        if (!$post) {
+            throw new \Exception('the post is not exists');
+        }
 
         return view('news.single')->with('post', $post);
     }
