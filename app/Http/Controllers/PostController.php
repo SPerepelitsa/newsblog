@@ -71,10 +71,7 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        $post = Post::find($id);
-        if (!$post) {
-            throw new \Exception('the post is not exists');
-        }
+        $post = Post::findOrFail($id);
 
         return view('posts.edit')->with('post', $post);
     }
@@ -93,10 +90,8 @@ class PostController extends Controller
             'body' => 'required',
         ]);
 
-        $post = Post::find($id);
-        if (!$post) {
-            throw new \Exception('the post is not exists');
-        }
+        $post = Post::findOrFail($id);
+
         $post->title = $request->title;
         $post->body = $request->body;
         $post->save();
@@ -112,10 +107,8 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        $post = Post::find($id);
-        if (!$post) {
-            throw new \Exception('the post is not exists');
-        }
+        $post = Post::findOrFail($id);
+
         $post->delete();
 
         return redirect()->route('posts.index')->with('success', 'Your post was successfully deleted!');

@@ -16,10 +16,7 @@ class NewsController extends Controller
 
     public function single($id)
     {
-        $post = Post::find($id);
-        if (!$post) {
-            throw new \Exception('the post is not exists');
-        }
+        $post = Post::findOrFail($id);
 
         return view('news.single')->with('post', $post);
     }
