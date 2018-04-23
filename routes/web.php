@@ -14,7 +14,7 @@
 //LogViewer routes
 //Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
-if(App::environment('local')) {
+if(!App::environment('prod')) {
     Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 }
 
