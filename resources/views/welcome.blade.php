@@ -9,6 +9,7 @@
         <!-- Start Posts Container -->
         <div class="col-2-3" id="post-container">
             <div class="wrap-col">
+
                 <!-- Start Post Item -->
                 @foreach($posts as $post)
                     <div class="post">
