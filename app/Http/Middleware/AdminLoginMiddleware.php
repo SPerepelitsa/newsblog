@@ -17,11 +17,11 @@ class AdminLoginMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if (! Auth::check()) {
+        if (!Auth::check()) {
             return redirect('login');
         }
 
-        if (! Auth::user()->isAdmin()) {
+        if (!Auth::user()->isAdmin()) {
             return redirect('/');
         }
         return $next($request);

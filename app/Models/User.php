@@ -36,9 +36,7 @@ class User extends Authenticatable
 
     public function role()
     {
-
         return $this->belongsTo('App\Models\Role');
-
     }
 
     public function hasPermissions()
@@ -51,8 +49,7 @@ class User extends Authenticatable
 
     public function isAdmin()
     {
-       return $this->role->name === 'admin';
-
+        return $this->role->name === 'admin';
     }
 
 }

@@ -19,7 +19,6 @@ class AddRoleIdFieldToUsers extends Migration
                 ->references('id')
                 ->on('roles')
                 ->onDelete('cascade');
-
         });
     }
 
@@ -32,7 +31,6 @@ class AddRoleIdFieldToUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('role_id');
-
         });
     }
 }
