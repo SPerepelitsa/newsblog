@@ -21,26 +21,8 @@
                         </ul>
                     </li>
                     <li class="menu-item"><a href="about.html">About us</a></li>
-
-                    @if(Auth::check())
-
-                        <li class="menu-item"><a href="#">{{Auth::user()->name}}</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item"><a href="#">Profile</a></li>
-                                @if(Auth::user()->role->name == 'admin')
-                                    <li class="menu-item"><a href="{{ route('posts.index') }}">Admin Panel</a></li>
-                                @endif
-                                <li class="menu-item"><a href="{{ route('logout') }}">Logout</a></li>
-                            </ul>
-                        </li>
-
-                    @else
-
-                        <li class="menu-item"><a href="{{ route('login') }}">Login</a></li>
-                        <li class="menu-item"><a href="{{ route('register') }}">Register</a></li>
-
-                    @endif
-
+                    <li class="menu-item"><a href="{{ route('login') }}">Login</a></li>
+                    <li class="menu-item"><a href="{{ route('register') }}">Register</a></li>
                 </ul>
                 <!-- End Navigation Menu -->
 
