@@ -12,9 +12,7 @@
 */
 
 //LogViewer routes
-//Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
-
-if(!App::environment('prod')) {
+if (!App::environment('prod')) {
     Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 }
 
@@ -25,16 +23,16 @@ Route::get('/', function () {
 
 // Authorization routes
 Auth::routes();
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 //News route (main page info)
 Route::get('/', 'NewsController@index')->name('main');
-Route::get('news/{post}', 'NewsController@single')->name('single');
+Route::get('news/{post}', 'NewsController@single')->name('single')->middleware('auth');
 
 //Posts routes
 Route::group(['prefix' => 'admin'], function () {
-    Route::resource('posts', 'PostController');
+    Route::resource('posts', 'PostController')->middleware('admin.login');
 });
-
 
 //Home route
 Route::get('/home', 'HomeController@index')->name('home');
